@@ -2,22 +2,12 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        
-        <style>
-            table {
-                width: 100%;
-            }
-            td {
-                vertical-align: top;
-            }
-        </style>
-        
     </head>
     <body>
         <table width="100%">
             <tbody>
                 <tr>
-                    <td>
+                    <td valign="top">
                         <ul>
                             <li><a href="../nav3.html">Account</a></li>
                             <li><a href="#">Dashboard</a></li>
@@ -30,7 +20,7 @@
                             <li><a href="#">Help</a></li>
                         </ul>
                     </td>
-                    <td>
+                    <td valign="top">
                         <ul>
                             <li><a href="#">Notifications</a></li>
                             <li><a href="./index.html">Profile</a></li>
@@ -43,10 +33,12 @@
                             <li><a href="#">Global Announcements</a></li>
                         </ul>
                     </td>
-                    <td>
+                    <td valign="top">
                         <p>Eruba Ekedayen's Profile</p>
                         <hr/>
-                        <button><a href="./edit.html" style="text-decoration: none; color: black;">Edit Profile</a></button>
+                        <form action="./edit.html">
+                        <button>Edit Profile</button>
+                        </form>
                         <h2>Eruba Ekedayen</h2>
                         <h3>Contact</h3>
                         <p>No registered services, you can add some on the <a href="#">settings</a> page</p>
