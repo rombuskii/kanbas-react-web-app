@@ -1,0 +1,44 @@
+.navigation {
+    background-color: black;
+    color:white;
+    min-height: 100vh;
+    max-height: 100vh;
+}
+
+.active {
+    background-color: white !important;
+    border-color: white !important;
+    color:red !important;
+}
+
+.icon-white {
+    color:gray;
+}
+
+.list-group-item {
+    background-color: black;
+    color:white;
+}
+
+.list-group-item-action:focus {
+    color: red;
+}
+
+.list-group-item-action:hover {
+    color: red;
+}
+
+.acc-nav > .list-group-item {
+    background-color: white;
+    color:red;
+    border: none;
+}
+
+.acc-nav >.list-group-item-action:focus {
+    color: black;
+    border-left: 2px solid black;
+}
+
+.acc-nav >.list-group-item-action:hover {
+    color: black;
+}
