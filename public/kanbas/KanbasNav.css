@@ -1,14 +1,43 @@
+html {
+    overflow: hidden;
+    height: 100%;
+  }
+  
+  body {
+    overflow: auto;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
 .navigation {
     background-color: black;
     color:white;
     min-height: 100vh;
-    max-height: 100vh;
+    max-height: 100%;
+    width: 85px;
+    font-size: 1em;
 }
+
+a {
+    color:red;
+    text-decoration: none;
+}
+
+a:hover {
+    color:red;
+}
+
+
 
 .active {
     background-color: white !important;
     border-color: white !important;
     color:red !important;
+}
+
+.acc-sidebar {
+    width: 200px;
+    margin-left:20px
 }
 
 .icon-white {
@@ -18,6 +47,7 @@
 .list-group-item {
     background-color: black;
     color:white;
+    padding: 5px;
 }
 
 .list-group-item-action:focus {
@@ -28,17 +58,131 @@
     color: red;
 }
 
+.burger-menu {
+    color:red
+}
+
+.btn-secondary {
+    background-color: gray;
+}
+
 .acc-nav > .list-group-item {
     background-color: white;
     color:red;
     border: none;
+    margin-bottom: 15px;
+}
+
+.tiny-nav > .list-group-item {
+    background-color: white;
+    color:red;
+    border: none;
+    margin-bottom: 0px;
+}
+
+.tiny-nav >.list-group-item-action:focus {
+    color: black;
+}
+
+.tiny-nav >.list-group-item-action:hover {
+    color: black;
+}
+
+.card {
+    margin-right: 20px;
+    margin-bottom: 30px;
 }
 
 .acc-nav >.list-group-item-action:focus {
     color: black;
+    padding-left: 10px;
     border-left: 2px solid black;
 }
 
 .acc-nav >.list-group-item-action:hover {
     color: black;
+}
+
+.card-title {
+    color:deepskyblue;
+    font-size: 0.8em;
+}
+
+.card {
+    color:gray;
+}
+
+.acc-nav > .selected {
+    color: black;
+    padding-left: 10px;
+    border-left: 2px solid black;
+}
+
+.navbar {
+    background-color: black;
+    color:white;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.nav-container a {
+    color:white;
+}
+
+.modules .list-group-item {
+    color:black;
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.modules .header {
+    background-color: lightgray;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+.topic {
+    font-size: 20px;
+}
+
+.material {
+    padding-left: 30px;
+}
+
+.burger {
+    font-size:20px;
+}
+
+.assignments > .form-control {
+    max-width: 25%;
+    display: inline;
+}
+
+.slight-text {
+    color:gray;
+    font-size:0.8em;
+}
+
+.assignments .material {
+    border-left: 5px solid green;
+}
+
+.assignments a {
+    color:black;
+}
+
+.green-text {
+    color:green;
+}
+
+.form-section {
+    width:75%;
+}
+
+.padded-form {
+    padding-left: 5%;
 }

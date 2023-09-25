@@ -13,7 +13,7 @@
                 <div class="col-2 col-xl-1 px-0 text-center navigation position-sticky">
                     <div class="list-group item d-flex flex-column" role="tablist">
                         <img class="img-fluid small" src="..//images/nulogo.png"/>
-                            <a href="#" class="list-group-item list-group-item-action active" data-toggle="list">
+                            <a href="#" class="list-group-item list-group-item-action" data-toggle="list">
                                 <i class="fa-solid border border-2 p-2 rounded-pill icon-white fa-user fa-sm"></i>
                                 <p>Account</p>
                             </a>
@@ -21,7 +21,7 @@
                                 <i class="fa-solid fa-gauge fa-sm" style="color:red"></i>
                                 <p>Dashboard</p>
                             </a>
-                            <a href="./cssHome.html" class="list-group-item list-group-item-action" data-toggle="list">
+                            <a href="#" class="list-group-item list-group-item-action" data-toggle="list">
                                 <i class="fa-solid fa-book fa-sm" style="color:red"></i>
                                 <p>Courses</p>
                             </a>
@@ -51,7 +51,7 @@
                             </a>
                     </div>
                 </div>
-                <div class="col-10 col-xl-11">
+                <div class=" col-10 col-xl-11">
                     <div class="container py-3">
                     <div class="d-flex align-items-baseline gap-4">
                     <i class="fa-solid burger-menu fa-lg fa-bars"></i>
@@ -62,7 +62,7 @@
                         <div class="col-2 acc-sidebar">
                             <div class="acc-nav list-group d-flex flex-column text-left" role="tablist">
                                 <a href="#" class="list-group-item list-group-item-action" data-toggle="list">Notifications</a>
-                                <a href="#" class="list-group-item list-group-item-action selected" data-toggle="list">Profile</a>
+                                <a href="#" class="list-group-item list-group-item-action" data-toggle="list">Profile</a>
                                 <a href="#" class="list-group-item list-group-item-action" data-toggle="list">Files</a>
                                 <a href="#" class="list-group-item list-group-item-action" data-toggle="list">Settings</a>
                                 <a href="#" class="list-group-item list-group-item-action" data-toggle="list">ePortfolios</a>
@@ -74,27 +74,63 @@
                         </div>
                         <div class="">
                             <div class="">
-                            <section class="py-3">
                             <i class="fa-solid border border-2 rounded-pill p-3 fa-user fa-7x" style="color:gray"></i>
-                            <h3>Eruba Ekedayen</h3>
-                            </section>
-                            <section class="py-3">
-                            <h4>Contact</h4>
-                            <p>No registered services, you can add some on the <a href="#">settings</a> page.</p>
-                            </section>
-                            <section class="py-3">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name:*</label>
+                                <input type="text" class="form-control" id="name" value="Eruba Ekedayen">
+                            </div>
+                            <div class="mb-3">
+                                <label for="pronouns" class="form-label">Pronouns:</label>
+                                <select class="form-select">
+                                    <option selected>None</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="title" class="form-label">Title:</label>
+                                <input type="text" class="form-control" id="title" value="">
+                            </div>
+                            <div class="mb-3">
+                                <h4>Contact</h4>
+                                <p>No registered services, you can add some on the <a href="#">settings</a> page.</p>
+                            </div>
+                            <div class="mb-3">
                                 <h4>Biography</h4>
-                                <p>Student, Software Engineer, AI, Space, and renewables enthusiast.</p>
-                            </section>
-                            <section class="py-3">
-                                <h4>Link</h4>
-                                <a href="#"><i class="fa-solid fa-link" style="color:gray"></i>Youtube</a>
-                            </section>
+                                <textarea class="form-control">Student, Software Engineer, AI, Space, and renewables enthusiast.</textarea>
+                            </div>
+                            <div class="mb-3">
+                                <h4>Links</h4>
+                                <div class="row text-center">
+                                    <div class="col-6">
+                                        <b>Title</b>
+                                        <div class="mb-1">
+                                            <span class="d-flex gap-3 align-items-center">
+                                                <input class="form-control" type="text" value="Youtube"/>
+                                                <i class="fa-solid fa-arrow-right"></i>
+                                            </span>
+                                        </div>
+                                        <button class="btn btn-light btn-sm border float-start">Add Another Link</button>
+                                    </div>
+                                    <div class="col-6">
+                                        <b>URL</b>
+                                        <div>
+                                            <span class="d-flex gap-1 align-items-center">
+                                                <input class="form-control" type="text" value="https://youtube.com"/>
+                                                <i class="fa-solid fa-xmark" style="color: #ff0000;"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr/>
+                                <div class="float-end">
+                                    <a href="AccountNavigation.html" class="btn btn-light border">Cancel</a>
+                                    <a href="AccountNavigation.html" class="btn btn-danger">Save Profile</a>
+                                </div>
+                            </div>
                             </div>
                         </div>
                         <div class="">
-                            <a href="./EditProfile.html" class="float-end d-flex btn btn-light border align-items-baseline gap-1"><i class="fa-solid fa-pencil fa-flip-horizontal"></i>Edit Profile</a>
-                        </div>
+                            <a href="./AccountNavigation.html" class="float-end d-flex btn btn-light border align-items-baseline gap-1"><i class="fa-solid fa-pencil fa-flip-horizontal"></i>Cancel Editing</a>
+                            </div>
                     </div>
                     </div>
                     </div>
