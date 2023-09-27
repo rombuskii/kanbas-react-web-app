@@ -85,7 +85,7 @@
                                 <a href="#" class="list-group-item list-group-item-action" data-toggle="list">Zoom Meetings</a>
                                 <a href="./assignments.html" class="list-group-item list-group-item-action selected" data-toggle="list">Assignments</a>
                                 <a href="#" class="list-group-item list-group-item-action" data-toggle="list">Quizzes</a>
-                                <a href="#" class="list-group-item list-group-item-action" data-toggle="list">Grades</a>
+                                <a href="./cssGrades.html" class="list-group-item list-group-item-action" data-toggle="list">Grades</a>
                                 <a href="#" class="list-group-item list-group-item-action" data-toggle="list">People</a>
                                 <a href="#" class="list-group-item list-group-item-action" data-toggle="list">Panopto Video</a>
                                 <a href="#" class="list-group-item list-group-item-action" data-toggle="list">Discussions</a>
@@ -101,8 +101,8 @@
                             </div>
                         </div>
                         <div class="col-9 assignments clearfix">
-                            <span class="float-end gap-3 d-flex align-items-baseline">
-                                <span class="green-text d-flex gap-1 align-items-baseline"><i class="fa-solid fa-circle-check" style="color: #358500;"></i><b>Published</b></span>
+                            <span class="float-end gap-2 d-flex align-items-baseline">
+                                <button class="btn btn-success d-flex gap-1 align-items-baseline"><i class="fa-solid fa-circle-check" style="color: #358500;"></i><b>Published</b></button>
                                 <button class="btn btn-secondary"><i class="fa-solid fa-ellipsis-vertical"></i></button>
                             </span>
                             <br>
@@ -112,14 +112,14 @@
                                 <label>Assignment Name</label>
                                 <input class="form-control" type="text" value="A1 - ENV + HTML"/>
                                 </section>
-                                <textarea rows="5" class="form-control">Random Stuff</textarea>
+                                <textarea rows="3" class="form-control">This assignment describes how to install the development environment for creating and working with Web application we will be developing this semester. We will add new content every week, pushing the code to a GitHub source repository, and then deploying the content to a remote server hosted on Netlify.</textarea>
                             </div>
                             <div class="row d-flex align-items-center mb-4">
                                 <div class="col-4">
                                     <label class="float-end">Points</label>
                                 </div>
                                 <div class="col-6">
-                                    <input class="form-control" type="number"/>
+                                    <input class="form-control" value="100" type="number"/>
                                 </div>
                             </div>
                             <div class="row d-flex align-items-center mb-4">
@@ -147,11 +147,90 @@
                                     <label class="float-end"></label>
                                 </div>
                                 <div class="col-6">
-                                    <select class="form-select">
-                                        <option class="" selected>ASSIGNMENTS</option>
-                                    </select>
+                                    <input id="final-grade-check" class="form-check-input" type="checkbox"/>
+                                    <label for="final-grade-check" class="form-check-label">Do not count this assignment towards the final grade</label>
                                 </div>
                             </div>
+                            <div class="row d-flex mb-4">
+                                <div class="col-4">
+                                    <label class="float-end">Submission Type</label>
+                                </div>
+                                <div class="col-6 border border-1 mx-3 p-3">
+                                    <div class="row">
+                                    <div class=" col-6">
+                                    <select class="form-select">
+                                        <option class="" selected>Online</option>
+                                    </select>
+                                    </div>
+                                    </div>
+                                    <p class="mt-4"><b>Online Entry Options</b></p>
+                                    <div class="d-flex flex-column gap-4">
+                                    <div>
+                                    <input id="text-entry" class="form-check-input" type="checkbox"/>
+                                    <label for="text-entry" class="form-check-label">Text Entry</label>
+                                    </div>
+                                    <div>
+                                    <input id="web-url" class="form-check-input" type="checkbox"/>
+                                    <label for="web-url" class="form-check-label">Website URL</label>
+                                    </div>
+                                    <div>
+                                    <input id="media-recs" class="form-check-input" type="checkbox"/>
+                                    <label for="media-recs" class="form-check-label">Media Recordings</label>
+                                    </div>
+                                    <div>
+                                    <input id="stud-ann" class="form-check-input" type="checkbox"/>
+                                    <label for="stud-ann" class="form-check-label">Student Annotation</label>
+                                    </div>
+                                    <div class="mb-4">
+                                    <input id="file-up" class="form-check-input" type="checkbox"/>
+                                    <label for="file-up" class="form-check-label">File Uploads</label>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row d-flex">
+                                <div class="col-4">
+                                    <label class="float-end">Assign</label>
+                                </div>
+                                <div class="col-6 border border-1 mx-3 p-3">
+                                    <h6><b>Assign To</b></h6>
+                                    <div class="u-tagsinput">
+                                    <input data-role="tagsinput" class="form-control mb-4" type="text" value="Everyone"/>
+                                    </div>
+                                    <h6><b>Due</b></h6>
+                                    <input class="form-control mb-4" type="date"/>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h6><b>Available from</b></h6>
+                                            <input class="form-control mb-4" type="date"/>
+                                        </div>
+                                        <div class="col-6">
+                                            <h6><b>Until</b></h6>
+                                    <input class="form-control mb-4" type="date"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row d-flex align-items-center mb-4 mt-0">
+                                <div class="col-4">
+                                    <label class="float-end"></label>
+                                </div>
+                                <div class="col-6 text-center mx-3  px-0">
+                                    <button type="button" class="text-center full btn btn-secondary btn-lg btn-block"><i class="fa-solid fa-plus"></i>Add</button>
+                                </div>
+                            </div>
+                            <hr>
+                        <div class="clearfix">
+                            <span class="float-start">
+                            <input id="notify-usr" class="form-check-input" type="checkbox"/>
+                            <label for="notify-usr" class="form-check-label">Notify users that this content has changed</label>
+                            </span>
+                            <span class="float-end">
+                                <button class="btn btn-secondary">Cancel</button>
+                                <button class="btn btn-danger">Save</button>
+                                </span>
+                        </div>
+                        <hr>
                     </div>
                 </div>
             </div>

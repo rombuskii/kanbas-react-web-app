@@ -186,3 +186,38 @@ a:hover {
 .padded-form {
     padding-left: 5%;
 }
+
+.assignments .btn-success {
+    background-color: white;
+    color:green;
+    border: none;
+}
+
+.full {
+    min-width: 100%;
+    background-color: lightgray;
+}
+
+.grades th, th > p {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+    font-weight: normal; 
+}
+
+.grades th.align-left, td.align-left {
+    text-align: left;
+}
+
+.grades input {
+    max-width: 25%;
+    display: inline;
+}
+
+.grades input:focus {
+    border-color:red;
+}
+
+tr:hover {
+    border-color: lightblue;
+}
