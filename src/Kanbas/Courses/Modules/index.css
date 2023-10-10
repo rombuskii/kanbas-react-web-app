@@ -1,0 +1,13 @@
+.modules .list-group-item {
+    color:black;
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.modules .header {
+    background-color: lightgray;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}

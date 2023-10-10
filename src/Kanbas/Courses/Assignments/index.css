@@ -1,0 +1,21 @@
+.assignments > .form-control {
+    max-width: 25%;
+    display: inline;
+}
+
+.slight-text {
+    color:gray;
+    font-size:0.8em;
+}
+
+.assignments .material {
+    border-left: 5px solid green;
+}
+
+.assignments a {
+    color:#000000;
+}
+
+.list-group-item {
+    border: 1px solid rgba(0,0,0,.125);
+}

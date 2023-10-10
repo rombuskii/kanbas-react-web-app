@@ -1,0 +1,13 @@
+.card {
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+.card-title {
+    color:deepskyblue;
+    font-size: 0.9em;
+}
+
+.card {
+    color:gray;
+}

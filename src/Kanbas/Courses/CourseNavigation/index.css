@@ -1,0 +1,38 @@
+.acc-nav > .list-group-item {
+    background-color: white;
+    color:red;
+    border: none;
+    margin-bottom: 15px;
+}
+
+.tiny-nav > .list-group-item {
+    background-color: white;
+    color:red;
+    border: none;
+    margin-bottom: 0px;
+}
+
+.tiny-nav >.list-group-item-action:focus {
+    color: black;
+}
+
+.tiny-nav >.list-group-item-action:hover {
+    color: black;
+}
+
+.acc-nav >.list-group-item-action:focus {
+    color: black;
+    padding-left: 10px;
+    border-left: 2px solid black;
+}
+
+.acc-nav >.list-group-item-action:hover {
+    color: black;
+}
+
+.acc-nav > .selected {
+    color: black;
+    padding-left: 10px;
+    border-left: 2px solid black;
+    border-radius: 0;
+}

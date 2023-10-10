@@ -1,0 +1,35 @@
+.active {
+    background-color: white !important;
+    color: red !important;
+}
+.nav-icon {
+    color:red;
+}
+
+.icon-white {
+    color:gray;
+}
+
+.navigation {
+    background-color: black;
+    color:white;
+    min-height: 100vh;
+    max-height: 100%;
+    width: 85px;
+    font-size: 1em;
+}
+
+.list-group-item {
+    border: none;
+    background-color: black;
+    color:white;
+    padding: 5px;
+}
+
+.list-group-item-action:focus {
+    color: red;
+}
+
+.list-group-item-action:hover {
+    color: red;
+}
