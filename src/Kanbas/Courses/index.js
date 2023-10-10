@@ -13,12 +13,13 @@ import Grades from './Grades'
 const Courses = () => {
     const { courseId } = useParams();
     let location = useLocation();
-    let section = location.pathname.split('/').indexOf(courseId) + 1
-    section = location.pathname.split('/')[section]
-    if(section.includes('%20')) {
+    let url = location.pathname.split('/')
+    const index = url.indexOf(courseId) + 1
+    let section = url[index]
+    /*if(section.includes('%20')) {
         section = section.split('%20')
         section = section.join(" ")
-    }
+    }*/
     const course = db.courses.find((course) => course._id === courseId);
   return (
     <>

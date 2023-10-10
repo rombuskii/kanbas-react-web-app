@@ -7,9 +7,9 @@ import "bootstrap"
 import {Routes, Route, Navigate} from "react-router";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faUser, faGauge, faBook, faCalendar, faInbox, faClock, faMicrochip, faQuestion, faRightFromBracket, faNewspaper, faEllipsisVertical, faGlasses, faBars, faCircleCheck, faPlus} from "@fortawesome/free-solid-svg-icons";
+import { faUser, faGauge, faBook, faCalendar, faInbox, faClock, faMicrochip, faQuestion, faRightFromBracket, faNewspaper, faEllipsisVertical, faGlasses, faBars, faCircleCheck, faPlus, faLink, faPencil} from "@fortawesome/free-solid-svg-icons";
 
-library.add(faUser, faPlus , faCircleCheck ,faEllipsisVertical, faGauge, faBook, faCalendar, faInbox, faClock, faMicrochip, faQuestion, faRightFromBracket, faNewspaper, faGlasses, faBars);
+library.add(faUser, faPencil,faLink, faPlus , faCircleCheck ,faEllipsisVertical, faGauge, faBook, faCalendar, faInbox, faClock, faMicrochip, faQuestion, faRightFromBracket, faNewspaper, faGlasses, faBars);
 
 function App() {
   return (

@@ -20,7 +20,7 @@
 }
 
 .list-group-item {
-    border: none;
+    border: none !important;
     background-color: black;
     color:white;
     padding: 5px;
