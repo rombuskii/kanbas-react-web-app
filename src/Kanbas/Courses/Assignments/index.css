@@ -16,6 +16,11 @@
     color:#000000;
 }
 
-.list-group-item {
-    border: 1px solid rgba(0,0,0,.125);
+.list-group-item.material {
+    border: 1px solid rgba(0,0,0,.125) !important;
+    border-left: 5px solid green !important;
+}
+
+.module {
+    text-decoration: none !important;
 }

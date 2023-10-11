@@ -1,0 +1,12 @@
+.nav {
+    text-decoration: none;
+    color:red;
+}
+
+.nav:hover {
+    color: black;
+}
+
+.exit {
+    cursor: pointer;
+}

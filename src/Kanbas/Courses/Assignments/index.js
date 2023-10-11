@@ -30,7 +30,7 @@ function Assignments() {
                 <Link
                 key={assignment._id}
                 to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
-                className="">
+                className="module">
                         <span class="topic">{assignment.title}</span>
                         <span>
                             <p class="slight-text mt-0"><b>Due:</b> {assignment.due} | 100pts</p>

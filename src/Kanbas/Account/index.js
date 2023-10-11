@@ -3,7 +3,7 @@ import AccountNavigation from './AccountNavigation'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import Profile from './Profile'
-import ProfileEditor from './Profile/ProfileEditor'
+import ProfileEditor from './ProfileEditor'
 
 const Account = () => {
     const pathname = useLocation();
