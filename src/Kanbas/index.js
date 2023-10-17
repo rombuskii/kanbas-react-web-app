@@ -1,16 +1,24 @@
 //import Nav from "../Nav";
 import KanbasNavigation from "./KanbasNavigation";
-import { Routes, Route, Navigate, Link } from "react-router-dom";
+import { Routes, Route, Navigate, Link, useLocation } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import Account from "./Account";
 import Courses from "./Courses";
 import Calendar from "./Calendar";
 import './index.css'
+import db from '../Kanbas/Database'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import BurgerMenu from "./Menus/Burger";
 import CourseMenu from "./Menus/Course";
 
 function Kanbas() {
+  let id = 'RS101'
+  const loc = useLocation();
+  const locList = loc.pathname.split('/')
+  if(locList.includes('Courses')) {
+    const index = locList.indexOf('Courses') + 1
+    id = locList[index]
+  }
+  
   return (
    <>
    {/*<Nav/>*/}
@@ -20,7 +28,7 @@ function Kanbas() {
                 <h6>Modules</h6>
                 <span class="d-flex gap-2 align-items-center">
                     <FontAwesomeIcon icon={'glasses'} className="fa-solid fa-glasses"/>
-                    <Link to={'/Kanbas/Menus/Course'} class="navbar-brand" ><FontAwesomeIcon icon={'chevron-down'} className="text-white fa-solid fa-chevron-down"/></Link>
+                    <Link to={`/Kanbas/CourseMenu/${id}`} class="navbar-brand" ><FontAwesomeIcon icon={'chevron-down'} className="text-white fa-solid"/></Link>
                 </span>
             </div>
       </nav>
@@ -34,8 +42,8 @@ function Kanbas() {
           <Route path="Dashboard" element={<Dashboard />} />
           <Route path="Courses/:courseId/*" element={<Courses/>} />
           <Route path="Calendar/*" element={<Calendar/>} />
+          <Route path="/CourseMenu/:courseId/*" element={<CourseMenu/>} />
         </Routes>
-
       </div>
     </div>
    </div>

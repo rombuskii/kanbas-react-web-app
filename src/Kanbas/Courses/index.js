@@ -9,6 +9,7 @@ import Assignments from './Assignments'
 import Modules from './Modules'
 import AssignmentEditor from './Assignments/AssignmentEditor'
 import Grades from './Grades'
+import CourseMenu from '../Menus/Course'
 
 const Courses = () => {
     const { courseId } = useParams();

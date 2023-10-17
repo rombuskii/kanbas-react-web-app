@@ -1,3 +1,12 @@
 .exit {
     cursor: pointer;
 }
+.navbar {
+    min-width: 100vw;
+}
+/*.modal {
+    min-width: 100vw;
+    min-height: 100vh;
+    z-index: 100;
+    background-color: black;
+}*/
