@@ -6,8 +6,17 @@
 .card-title {
     color:deepskyblue;
     font-size: 0.9em;
+    text-decoration: none;
 }
 
 .card {
     color:gray;
+}
+
+.card-text {
+    text-decoration: none;
+}
+
+.link {
+    text-decoration: none;
 }

@@ -11,7 +11,7 @@ import AssignmentEditor from './Assignments/AssignmentEditor'
 import Grades from './Grades'
 import CourseMenu from '../Menus/Course'
 
-const Courses = () => {
+const Courses = ({ courses }) => {
     const { courseId } = useParams();
     let location = useLocation();
     let url = location.pathname.split('/')
@@ -21,7 +21,7 @@ const Courses = () => {
         section = section.split('%20')
         section = section.join(" ")
     }*/
-    const course = db.courses.find((course) => course._id === courseId);
+    const course = courses.find((course) => course._id === courseId);
   return (
     <>
     <div class="container pt-3">
