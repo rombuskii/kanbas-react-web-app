@@ -16,6 +16,15 @@ const todos = [
 ];
   
 const Lab5 = (app) => {
+    app.get("/a5/todos/create", (req, res) => {
+        const newTodo = {
+          id: new Date().getTime(),
+          title: "New Task",
+          completed: false,
+        };
+        todos.push(newTodo);
+        res.json(todos);
+    });    
     app.get("/a5/todos", (req, res) => {
         const { completed } = req.query;
         if (completed !== undefined && completed === 'true') {
