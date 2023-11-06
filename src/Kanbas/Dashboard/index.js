@@ -24,14 +24,14 @@ const Dashboard = ({courses, course, setCourse, addNewCourse,
         <h4>Published Courses ({courses.length})</h4>
         <hr/>
         <div class="d-flex flex-row flex-wrap">
-        {courses.map((course) => (
-          <Link key={course._id} to={`/Kanbas/Courses/${course._id}`} className="link">
+        {courses.map((c) => (
+          <Link key={c._id} to={`/Kanbas/Courses/${c._id}`} className="link">
             <div class="card" style={{"width": "260px"}}>
                 <img src="./images/gray.png" height="150px" class="card-img-top" alt="..."/>
                 <div class="card-body">
-                    <h5 class="card-title text-truncate">{course.number} {course.name}</h5>
-                    <h6 class="card-text text-truncate">{course._id}</h6>
-                    <p class="card-text text-truncate">{course._id} 2023 Spring Semester</p>
+                    <h5 class="card-title text-truncate">{c.number} {c.name}</h5>
+                    <h6 class="card-text text-truncate">{c._id}</h6>
+                    <p class="card-text text-truncate">{c._id} 2023 Spring Semester</p>
                     <FontAwesomeIcon icon='newspaper'/>
                     <i class="fa-solid fa-newspaper"></i>
                 </div>
@@ -39,7 +39,7 @@ const Dashboard = ({courses, course, setCourse, addNewCourse,
                 <button
               onClick={(event) => {
                 event.preventDefault();
-                setCourse(course);
+                setCourse(c);
               }} className="btn btn-secondary">
               Edit
             </button>
@@ -49,11 +49,10 @@ const Dashboard = ({courses, course, setCourse, addNewCourse,
               }} >
               Update
             </button>
-
                 <button
               onClick={(event) => {
                 event.preventDefault();
-                deleteCourse(course);
+                deleteCourse(c);
               }} className="btn btn-danger">
               Delete
             </button>
