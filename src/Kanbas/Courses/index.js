@@ -9,10 +9,23 @@ import Assignments from './Assignments'
 import Modules from './Modules'
 import AssignmentEditor from './Assignments/AssignmentEditor'
 import Grades from './Grades'
-import CourseMenu from '../Menus/Course'
+import {useState, useEffect} from 'react'
+import axios from 'axios'
 
-const Courses = ({ courses }) => {
+const Courses = () => {
     const { courseId } = useParams();
+    const URL = "http://localhost:4000/api/courses";
+    const [course, setCourse] = useState({});
+    const findCourseById = async (courseId) => {
+      const response = await axios.get(
+        `${URL}/${courseId}`
+      );
+      setCourse(response.data);
+    };  
+    useEffect(() => {
+      findCourseById(courseId);
+    }, [courseId]);
+  
     let location = useLocation();
     let url = location.pathname.split('/')
     const index = url.indexOf(courseId) + 1
@@ -21,7 +34,7 @@ const Courses = ({ courses }) => {
         section = section.split('%20')
         section = section.join(" ")
     }*/
-    const course = courses.find((course) => course._id === courseId);
+    //const course = courses.find((course) => course._id === courseId);
   return (
     <>
     <div class="container pt-3">

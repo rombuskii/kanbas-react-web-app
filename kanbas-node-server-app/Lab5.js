@@ -16,15 +16,35 @@ const todos = [
 ];
   
 const Lab5 = (app) => {
-    app.get("/a5/todos/create", (req, res) => {
+    app.post("/a5/todos", (req, res) => {
         const newTodo = {
+          ...req.body,
           id: new Date().getTime(),
-          title: "New Task",
-          completed: false,
         };
         todos.push(newTodo);
-        res.json(todos);
+        res.json(newTodo);
+    });
+    app.delete("/a5/todos/:id", (req, res) => {
+        const { id } = req.params;
+        const todo = todos.find((t) => t.id === parseInt(id));
+        todos.splice(todos.indexOf(todo), 1);
+        res.sendStatus(200);
+    });
+    app.put("/a5/todos/:id", (req, res) => {
+        const { id } = req.params;
+        const todo = todos.find((t) => t.id === parseInt(id));
+        todo.title = req.body.title;
+        todo.description = req.body.description;
+        todo.due = req.body.due;
+        todo.completed = req.body.completed;
+        res.sendStatus(200);
     });    
+    app.get("/a5/todos/:id/title/:title", (req, res) => {
+        const { id, title } = req.params;
+        const todo = todos.find((t) => t.id === parseInt(id));
+        todo.title = title;
+        res.json(todos);
+    });
     app.get("/a5/todos", (req, res) => {
         const { completed } = req.query;
         if (completed !== undefined && completed === 'true') {

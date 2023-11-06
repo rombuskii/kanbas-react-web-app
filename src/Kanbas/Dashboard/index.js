@@ -45,7 +45,7 @@ const Dashboard = ({courses, course, setCourse, addNewCourse,
             </button>
             <button className="btn btn-warning" onClick={(event) => {
               event.preventDefault();
-              updateCourse();
+              updateCourse(course);
               }} >
               Update
             </button>
@@ -53,7 +53,7 @@ const Dashboard = ({courses, course, setCourse, addNewCourse,
                 <button
               onClick={(event) => {
                 event.preventDefault();
-                deleteCourse(course._id);
+                deleteCourse(course);
               }} className="btn btn-danger">
               Delete
             </button>
