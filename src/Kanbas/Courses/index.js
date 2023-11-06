@@ -11,10 +11,11 @@ import AssignmentEditor from './Assignments/AssignmentEditor'
 import Grades from './Grades'
 import {useState, useEffect} from 'react'
 import axios from 'axios'
+import { COURSES_URL } from './Modules/client'
 
 const Courses = () => {
     const { courseId } = useParams();
-    const URL = "http://localhost:4000/api/courses";
+    const URL = COURSES_URL;
     const [course, setCourse] = useState({});
     const findCourseById = async (courseId) => {
       const response = await axios.get(

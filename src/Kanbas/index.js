@@ -13,10 +13,11 @@ import CourseMenu from "./Menus/Course";
 import store from "./store";
 import { Provider } from "react-redux";
 import axios from "axios";
+import { COURSES_URL } from "./Courses/Modules/client";
 
 function Kanbas() {
   const [courses, setCourses] = useState([])
-  const URL = "http://localhost:4000/api/courses";
+  const URL = COURSES_URL;
   const findAllCourses = async () => {
     const response = await axios.get(URL);
     setCourses(response.data);
