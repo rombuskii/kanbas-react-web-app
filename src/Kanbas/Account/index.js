@@ -5,7 +5,7 @@ import {Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import Profile from './Profile'
 import ProfileEditor from './ProfileEditor'
 
-const Account = () => {
+const UserAccount = () => {
     const pathname = useLocation();
     const sections = pathname.pathname.split('/')
     const index = sections.indexOf('Account') + 1
@@ -36,4 +36,4 @@ const Account = () => {
   )
 }
 
-export default Account
+export default UserAccount
